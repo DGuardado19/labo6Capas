@@ -8,5 +8,5 @@ import com.uca.capas.labo6.domain.Contribuyente;
 
 public interface ContribuyenteDAO {
 	public List<Contribuyente>findAll() throws DataAccessException;
-	public void insert(Contribuyente contribuyente) throws DataAccessException;
+	public void insertContri(Contribuyente contribuyente) throws DataAccessException;
 }

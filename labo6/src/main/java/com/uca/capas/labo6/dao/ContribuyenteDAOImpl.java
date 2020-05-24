@@ -31,7 +31,7 @@ public class ContribuyenteDAOImpl implements ContribuyenteDAO {
 
 	@Override
 	@Transactional
-	public void insert(Contribuyente contribuyente) throws DataAccessException {
+	public void insertContri(Contribuyente contribuyente) throws DataAccessException {
 		// TODO Auto-generated method stub
 		entityManager.persist(contribuyente);
 	}
