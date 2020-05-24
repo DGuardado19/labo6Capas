@@ -1,5 +1,8 @@
 package com.uca.capas.labo6.domain;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -93,9 +96,12 @@ public class Contribuyente {
 		this.s_nit = s_nit;
 	}
 
-	public Date getF_fecha_ingreso() {
-		return f_fecha_ingreso;
-	}
+	public String getF_fecha_ingreso() throws ParseException {
+        DateFormat format1 = new SimpleDateFormat("dd/mm/yyyy");
+        Date newd=new SimpleDateFormat("yyyy-mm-dd").parse(String.valueOf(f_fecha_ingreso));
+        String sd = format1.format(newd); 
+        return sd;
+    }
 
 	public void setF_fecha_ingreso(Date f_fecha_ingreso) {
 		this.f_fecha_ingreso = f_fecha_ingreso;
